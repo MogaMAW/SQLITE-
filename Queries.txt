@@ -1,0 +1,33 @@
+Qn. Write a querry to return the list of movies and their genres.
+
+sqlite> SELECT movies.title,genres.genre FROM movies LEFT JOIN genres ON movies.id=genres.id; 
+
+..............................................................................................
+#To open sqlite in Virtual Studio Code(VSC)
+1. Enter ./sqlite3
+2. sqlite> .open moga.db
+3. sqlite> .schema
+4. CREATE TABLE movies(id INTEGER, title TEXT, PRIMARY KEY(id));
+   CREATE TABLE movie_genre(movies_id INTEGER,genre_id INTEGER,PRIMARY KEY(genre_id),FOREIGN KEY(movies_id) REFERENCES movies(id));
+   CREATE TABLE genres(id INTEGER, genre TEXT, PRIMARY KEY(id),FOREIGN KEY(id) REFERENCES movie_genre(genre_id));
+
+5. sqlite> SELECT * FROM movies;           #Query to return all films in movies.
+   sqlite> SELECT * FROM genres;           #Query to return all genres.
+   sqlite> SELECT * FROM movie_genre;      #Query to returns movie_id and genre_id.
+   sqlite> SELECT movies.title,genres.genre FROM movies LEFT JOIN genres ON movies.id=genres.id;  #Query to return the list of movies and their genres.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
