@@ -1,0 +1,30 @@
+
+Qn.1 Write a query that returns 5 movies with the highest rating.
+
+SELECT sh.title FROM shows sh, ratings r WHERE r.show_id = sh.id ORDER BY r.rating DESC LIMIT 5;
+
+Qn.2 Write a query that returns all the genres of the movies acted by Robert Downey Jr.
+
+SELECT g.genre FROM people p, stars s, genres g WHERE p.id=s.person_id AND s.show_id=g.show_id AND p.name LIKE "%Robert Downey Jr.%";
+
+
+OUTPUTS:
+Qn.1
+sqlite> SELECT sh.title FROM shows sh, ratings r WHERE r.show_id = sh.id ORDER BY r.rating DESC LIMIT 5;
+"Second Chance"
+"Karadjordje i pozoriste"
+Heartland
+"Kelly James & The Folk Review"
+"Forgotten Internet"
+sqlite>
+
+Qn2.
+sqlite> SELECT g.genre FROM people p, stars s, genres g WHERE p.id=s.person_id AND s.show_id=g.show_id AND p.name LIKE "%Robert Downey Jr.%";
+Talk-Show
+Talk-Show
+Comedy
+Documentary
+News
+Talk-Show
+Documentary
+sqlite>
