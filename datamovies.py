@@ -8,6 +8,7 @@ db = SQL("sqlite:///moga.db")
 
 //creating table movies 
 db.execute("CREATE TABLE movies(id INTEGER, title TEXT, PRIMARY KEY(id))")
+//creating table movie_genre 
 db.execute("CREATE TABLE movie_genre(movies_id INTEGER,genre_id INTEGER,PRIMARY KEY(genre_id),FOREIGN KEY(movies_id) REFERENCES movies(id))" )
 db.execute("CREATE TABLE genres(id INTEGER, genre TEXT, PRIMARY KEY(id),FOREIGN KEY(id) REFERENCES movie_genre(genre_id))")
 
