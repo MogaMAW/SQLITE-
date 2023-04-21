@@ -1,4 +1,5 @@
 import csv 
+
 from cs50 import SQL
 
 //using the database moga.db
