@@ -16,7 +16,6 @@ with open("gross movies.csv","r") as file:
 
     reader = csv.DictReader(file)
     
-    
     for row in reader:
         title = row["Film"].strip().capitalize()
         id= db.execute("INSERT INTO movies(title) VALUES(?)", title)
