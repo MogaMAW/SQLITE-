@@ -19,6 +19,7 @@ db.execute("CREATE TABLE genres(id INTEGER, genre TEXT, PRIMARY KEY(id),FOREIGN 
 
 with open("gross movies.csv","r") as file:
 
+
     reader = csv.DictReader(file)
     
     for row in reader:
