@@ -3,6 +3,7 @@ sqlite> SELECT movies.title,genres.genre FROM movies LEFT JOIN genres ON movies.
 
 ..............................................................................................
 #To open sqlite in Virtual Studio Code(VSC)
+
 1. Enter ./sqlite3
 2. sqlite> .open moga.db
 3. sqlite> .schema
