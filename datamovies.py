@@ -1,6 +1,7 @@
 import csv 
 from cs50 import SQL
 
+
 //using the database moga.db
 open("moga.db","w").close()
 db = SQL("sqlite:///moga.db")
