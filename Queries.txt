@@ -1,7 +1,6 @@
 # Qn. Write a querry to return the list of movies and their genres.
 sqlite> SELECT movies.title,genres.genre FROM movies LEFT JOIN genres ON movies.id=genres.id; 
 
-
 ..............................................................................................
 #To open sqlite in Virtual Studio Code(VSC)
 
