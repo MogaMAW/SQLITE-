@@ -16,6 +16,7 @@ sqlite> SELECT movies.title,genres.genre FROM movies LEFT JOIN genres ON movies.
    sqlite> SELECT * FROM genres;       #Query to return all genres.
    sqlite> SELECT * FROM movie_genre;    #Query to returns movie_id and genre_id.
    sqlite> SELECT movies.title,genres.genre FROM movies LEFT JOIN genres ON movies.id=genres.id;
+
   #Query to return the list of movies and their genres.
 
 
